@@ -7,19 +7,15 @@ function handleClick(e) {
   displayMessage(greet(timeString));
 }
 
-// document.getElementById("greeting").addEventListener("submit", greet)
+function greet(string){
+  let parsed = parseInt(string, 10);
 
-function greet(timeString){
-  let timeInteger = timeString.split(":");
-
-  if (parseInt(timeInteger[0]) < 12){
+    if (parsed < 12){
     return "Good Morning";
-  }
-  else if (parseInt(timeInteger[0] >= 12) && parseInt(timeInteger[0] < 17)){
+  } else if (parsed < 17) {
     return "Good Afternoon";
-  }
-  else if (parseInt(timeInteger[0] >= 17)){
-    return "Good Evening";
+  } else {
+    return "Good Evening"
   }
 }
 
